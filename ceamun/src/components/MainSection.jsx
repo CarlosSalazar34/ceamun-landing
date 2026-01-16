@@ -36,7 +36,7 @@ export default function MainSection() {
             <button className="mt-5 bg-white/80 text-red-400 p-4 font-medium rounded-2xl text-md
             cursor-pointer hover:scale-102 transition-all transition-300
             " onClick={()=> {
-                document.getElementById('about-us').scrollIntoView({behavior: 'smooth'})
+                document.getElementById('nosotros').scrollIntoView({behavior: 'smooth'})
             }}>Saber más de nosotros</button>
         </section>
     )
