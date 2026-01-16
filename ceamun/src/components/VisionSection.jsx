@@ -7,7 +7,7 @@ export default function VisionSection(){
     useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) setVisible(true); // Se queda visible una vez que entra
-        }, { threshold: 0.1 });
+        }, { threshold: 0.5 });
 
         if (containerRef.current) observer.observe(containerRef.current);
         return () => observer.disconnect();
@@ -31,15 +31,15 @@ export default function VisionSection(){
                     className="flex flex-col md:flex-row gap-10 items-stretch justify-center w-full"
                 >
                     {/* Primer Cuadro */}
-                    <div className={`group relative p-8 rounded-3xl bg-white/95 shadow-2xl transition-all duration-1000 transform flex-1 border-b-8 border-red-600
-                        ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}
+                    <div className={`group relative p-8 rounded-3xl bg-white/95 shadow-2xl transition-all duration-600 transform flex-1 border-b-8 border-red-600
+                        ${visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}`}
                     >
                         <div className="absolute -top-6 left-8 bg-red-600 text-white p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                         </div>
-                        <p className="text-md md:text-2xl leading-relaxed text-slate-800">
+                        <p className="text-xl leading-relaxed text-slate-800">
                             La visión de <span className="text-red-600 font-bold italic">CEAMUN </span>
                              la formación académica convencional; aspiramos a ser el epicentro donde la 
                              <span className="underline decoration-red-500/40">maestría intelectual</span> 
@@ -49,8 +49,8 @@ export default function VisionSection(){
                         </p>
                     </div>
 
-                    <div className={`group relative p-8 rounded-3xl bg-white/95 shadow-2xl transition-all duration-1000 transform flex-1 border-b-8 border-red-600
-                        ${visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-5"}`}
+                    <div className={`group relative p-8 rounded-3xl bg-white/95 shadow-2xl transition-all duration-600 transform flex-1 border-b-8 border-red-600
+                        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                         style={{ transitionDelay: '100ms' }} 
                     >
                         <div className="absolute -top-6 left-8 bg-red-600 text-white p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
@@ -58,12 +58,11 @@ export default function VisionSection(){
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                             </svg>
                         </div>
-                        <p className="text-xl md:text-2xl leading-relaxed text-slate-800">
-                            Nuestro norte es consolidar una comunidad de líderes que vean en la <span className="text-red-600 font-bold italic">unión</span>
+                        <p className="text-xl leading-relaxed text-slate-800">
+                            Nuestro norte es consolidar una comunidad de líderes que vean en la <span className="text-red-600 font-bold italic">unión </span>
                              su mayor ventaja competitiva. En CEAMUN, proyectamos un futuro donde la lealtad y el trabajo en equipo 
                              sean el motor que impulse a la delegación del Colegio El Ángel a superar sus propios límites. Nuestra meta
-                              no es solo liderar el circuito a través de premios, sino transformarlo mediante el ejemplo de una familia que
-                               debate con rigor y convive con mística.
+                            no es solo liderar el circuito a través de premios, sino transformarlo mediante el ejemplo de una familia que debate con rigor y convive con mística.
                         </p>
                     </div>
                 </article>
