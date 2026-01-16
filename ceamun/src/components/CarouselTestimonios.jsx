@@ -1,5 +1,5 @@
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Pagination, Autoplay } from 'swiper/modules';
 import { Pagination } from 'swiper/modules';
 import { User } from 'lucide-react';
 import img1 from '../owners/darla.jpg';
@@ -47,48 +47,66 @@ const testimonios = [
 ];
 
 export default function CarouselTestimonios() {
+    // Estado para saber qué tarjeta fue clickeada
+    const [activeId, setActiveId] = useState(null);
+
+    const toggleActive = (id) => {
+        if (activeId === id) {
+            setActiveId(null); // Si ya está abierta, la cierra
+        } else {
+            setActiveId(id); // Abre la nueva
+        }
+    };
+
     return (
         <div className="max-w-4xl mx-auto">
             <Swiper
-                // modules={[Pagination, Autoplay]}
                 modules={[Pagination]}
                 spaceBetween={30}
                 slidesPerView={1}
                 pagination={{ clickable: true }}
-                // autoplay={{ delay: 3000 }}
                 breakpoints={{
                     640: { slidesPerView: 2 },
                 }}
             >
-                {testimonios.map((item) => (
-                    <SwiperSlide key={item.id} className="pb-12">
-                        {/* Cambiamos justify-center por justify-start y añadimos un padding superior fijo */}
-                        <div className="group bg-white p-8 rounded-lg shadow-xl border border-gray-100 text-center flex flex-col justify-center items-center min-h-[500px] justify-start transition-all duration-500">
+                {testimonios.map((item) => {
+                    const isActive = activeId === item.id;
 
-                            {/* IMAGEN: Usamos scale en lugar de h-10 para que el contenedor mantenga su espacio original */}
-                            <div className="w-60 h-60 bg-red-50 rounded-full flex items-center justify-center mb-4 text-red-500 transition-all duration-500 transform group-hover:w-15 group-hover:h-15 origin-center">
-                                {item.image ? (
-                                    <img src={item.image} alt={item.name} className='rounded-full h-full w-full object-cover shadow-md' />
-                                ) : (
-                                    <User size={40} />
-                                )}
+                    return (
+                        <SwiperSlide key={item.id} className="pb-12">
+                            <div 
+                                onClick={() => toggleActive(item.id)}
+                                className={`group bg-white p-8 rounded-lg shadow-xl border border-gray-100 text-center flex flex-col items-center min-h-[500px] justify-start transition-all duration-500 cursor-pointer ${isActive ? 'ring-2 ring-red-500 shadow-2xl' : ''}`}
+                            >
+                                {/* IMAGEN: Se encoge si hay hover O si está activa */}
+                                <div className={`bg-red-50 rounded-full flex items-center justify-center mb-4 text-red-500 transition-all duration-500 transform origin-center 
+                                    ${isActive ? 'w-20 h-20' : 'w-60 h-60 group-hover:w-20 group-hover:h-20'}`}>
+                                    {item.image ? (
+                                        <img src={item.image} alt={item.name} className='rounded-full h-full w-full object-cover shadow-md' />
+                                    ) : (
+                                        <User size={40} />
+                                    )}
+                                </div>
+
+                                {/* NOMBRE Y CARGO: Sube si hay hover O si está activa */}
+                                <div className={`transition-all duration-500 transform ${isActive ? '-translate-y-4' : 'group-hover:-translate-y-4'}`}>
+                                    <h4 className="font-bold text-lg">{item.name}</h4>
+                                    <span className="text-sm text-red-600 font-semibold">{item.cargo}</span>
+                                </div>
+
+                                {/* TEXTO: Visible si hay hover O si está activa */}
+                                <div className={`overflow-hidden transition-all duration-500 ease-in-out 
+                                    ${isActive 
+                                        ? 'max-h-[300px] opacity-100 mt-2' 
+                                        : 'max-h-0 opacity-0 group-hover:max-h-[300px] group-hover:opacity-100 group-hover:mt-2'}`}>
+                                    <p className="text-gray-600 italic text-sm px-2 border-t pt-4 mt-2">
+                                        "{item.text}"
+                                    </p>
+                                </div>
                             </div>
-
-                            {/* NOMBRE Y CARGO: Movimiento sutil hacia arriba */}
-                            <div className="transition-all duration-500 transform group-hover:-translate-y-4">
-                                <h4 className="font-bold text-lg">{item.name}</h4>
-                                <span className="text-sm text-red-600 font-semibold">{item.cargo}</span>
-                            </div>
-
-                            <div className="max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:max-h-[250px] group-hover:opacity-100 group-hover:mt-2">
-                                <p className="text-gray-600 italic text-sm px-2 border-t pt-4 mt-2">
-                                    "{item.text}"
-                                </p>
-                            </div>
-
-                        </div>
-                    </SwiperSlide>
-                ))}
+                        </SwiperSlide>
+                    );
+                })}
             </Swiper>
         </div>
     );
