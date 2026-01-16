@@ -2,6 +2,11 @@
 @import "tailwindcss";
 
 
+body, html {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
 .title {
     font-family: "Anton", sans-serif;
     font-size: 200px;
