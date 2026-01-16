@@ -76,7 +76,7 @@ export default function CarouselTestimonios() {
                         <SwiperSlide key={item.id} className="pb-12">
                             <div 
                                 onClick={() => toggleActive(item.id)}
-                                className={`group bg-white p-8 rounded-lg shadow-xl border border-gray-100 text-center flex flex-col items-center min-h-[500px] justify-start transition-all duration-500 cursor-pointer ${isActive ? 'ring-2 ring-red-500 shadow-2xl' : ''}`}
+                                className={`group bg-white p-8 rounded-lg shadow-xl border border-gray-100 text-center flex flex-col items-center min-h-[520px] justify-start transition-all duration-500 cursor-pointer ${isActive ? 'ring-2 ring-red-500 shadow-2xl' : ''}`}
                             >
                                 {/* IMAGEN: Se encoge si hay hover O si está activa */}
                                 <div className={`bg-red-50 rounded-full flex items-center justify-center mb-4 text-red-500 transition-all duration-500 transform origin-center 
