@@ -2,7 +2,7 @@ import Carousel from "./Carousel";
 
 export default function AboutUs() {
     return (
-        <section id="about-us" className="min-h-screen bg-slate-50 py-16 px-6 md:px-12">
+        <section id="nosotros" className="min-h-screen bg-slate-50 py-16 px-6 md:px-12">
             <h2 className="text-6xl md:text-8xl font-medium mb-16 flex items-center justify-center text-black/80">
                 Nosotros
             </h2>
