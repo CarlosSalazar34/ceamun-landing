@@ -34,7 +34,10 @@ export default function Header() {
                         {options.map((value, index) => (
                             <div
                                 key={index}
-                                className="text-sm subrayado font-semibold text-gray-600 hover:text-red-600 cursor-pointer transition-all duration-300 hover:scale-105 px-3 py-2"
+                                style={{
+                                    animationDelay: `${0.1*index}s`
+                                }}
+                                className="header-items subrayado text-sm font-semibold text-gray-600 hover:text-red-600 cursor-pointer transition-all duration-300 hover:scale-105 px-3 py-2"
                                 onClick={() => scrollToSection(value.id)}
                             >
                                 {value.name}
