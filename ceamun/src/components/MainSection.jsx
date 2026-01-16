@@ -1,10 +1,24 @@
 import { FaArrowDown } from "react-icons/fa6";
+import { useState, useEffect } from "react";
 
 export default function MainSection() {
     const title = "CEAMUN".split("")
+    const [responsive, setResponsive] = useState(false);
+    useEffect(() => {
+    const handleResize = () => {
+        setResponsive(window.innerWidth < 620);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+}, []);
+
     return (
         <section class="h-[90vh] bg-gradient-to-tl to-red-400 from-black/80 w-full flex flex-col items-center justify-center">
-            <h1 className="title text-white flex gap-1">
+            <h1 className={`${responsive? 'text-[3rem]': 'title'} text-white flex gap-1`}>
                 {title.map((value, index) => (
                     <span
                         key={index}
@@ -15,7 +29,7 @@ export default function MainSection() {
                     </span>
                 ))}
             </h1>
-            <p className="mt-4 text-xl font-medium bg-gradient-to-r from-red-200 to-white bg-clip-text text-transparent">
+            <p className="mt-4 text-center text-xl font-medium bg-gradient-to-r from-red-200 to-white bg-clip-text text-transparent">
                 "Volando con alas de esfuerzo hacia el mañana"
             </p>
             <FaArrowDown className="scale-200 mt-10 text-white animate-bounce"/>
