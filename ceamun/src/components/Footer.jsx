@@ -18,9 +18,9 @@ export default function Footer() {
             Un espacio donde la academia se encuentra con la familia y los valores.
           </p>
           <div className="flex space-x-4 pt-2">
-            <a href="#" className="hover:text-red-500 transition-colors"><Instagram size={20} /></a>
+            <a href="https://www.instagram.com/ceamun" className="hover:text-red-500 transition-colors"><Instagram size={20} /></a>
             <a href="#" className="hover:text-red-500 transition-colors"><Twitter size={20} /></a>
-            <a href="#" className="hover:text-red-500 transition-colors"><Mail size={20} /></a>
+            <a href="mailto:" className="hover:text-red-500 transition-colors"><Mail size={20} /></a>
           </div>
         </div>
 
