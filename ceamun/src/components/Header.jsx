@@ -20,7 +20,7 @@ export default function Header() {
     };
 
     return (
-        <header className="bg-white sticky top-0 z-50 shadow-md">
+        <header className="bg-white fixed top-0 w-full z-50 shadow-md">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
                     
