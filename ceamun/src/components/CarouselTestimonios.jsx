@@ -27,9 +27,8 @@ const testimonios = [
          orgullo, lealtad y te enseña a preocuparte por el bienestar del otro y no solo el tuyo. Cuando 
          fui delegada me enfoqué mucho en superarme a mí misma y divertirme, pero como Faculty y autoridad ahora 
          mi prioridad es otra. Esta es buscar el bien común de todos los integrantes de CEAMUN y preservar el legado
-        de excelencia. En este cambio está la diferencia. Tener un cargo en MUN no está para hacerte la vida más fácil,
-        imponerse o pasar por encima de las normas, en realidad es todo lo contrario. Si uno es autoridad, uno debe usar ese 
-        poder para servir a los demás, impulsarlos y dar ejemplo.`,
+        de excelencia. En este cambio está la diferencia. Si uno es autoridad, uno debe usar ese  poder para servir 
+        a los demás, impulsarlos y dar ejemplo.`,
         name: '-Darla Andrade',
         cargo: 'Faculty Advisor 2025-2026',
         image: img1
@@ -52,8 +51,7 @@ const testimonios = [
         Hoy, como Secretaria General de CEAMUN 2026, miro hacia atrás y veo que este modelo no solo fue una actividad; fue donde
         crecí. De esa niña que apenas se atrevía a hablar, a estar hoy aquí dando todo de mí por la delegación que me formó. Han 
         sido seis años de aprendizaje, esfuerzo y una pasión que, lejos de agotarse, hoy está más fuerte que nunca.
-        Más allá de los debates y las resoluciones, lo que realmente me mantuvo aquí todo este tiempo fue la familia que encontré.
-        CEAMUN se convirtió en mi lugar seguro, un espacio donde crecí rodeada de personas que se volvieron mis hermanos de vida.`,
+        Más allá de los debates y las resoluciones, lo que realmente me mantuvo aquí todo este tiempo fue la familia que encontré.`,
         name: "-Maria Isabella Castelo",
         cargo: 'Secretaría General',
         image: img4
@@ -73,7 +71,7 @@ export default function CarouselTestimonios() {
     };
 
     return (
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-5">
             <Swiper
                 modules={[Pagination]}
                 spaceBetween={30}
