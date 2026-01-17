@@ -42,7 +42,7 @@ export default function VisionSection(){
                         <p className="text-xl leading-relaxed text-slate-800">
                             La visión de <span className="text-red-600 font-bold italic">CEAMUN </span>
                              la formación académica convencional; aspiramos a ser el epicentro donde la 
-                             <span className="underline decoration-red-500/40">maestría intelectual</span> 
+                             <span className="underline decoration-red-500/40"> maestría intelectual </span> 
                              se encuentra con la cohesión humana. No entendemos la excelencia como un logro individual,
                               sino como un estándar colectivo que solo se alcanza cuando cada delegado se siente respaldado 
                               por una estructura de apoyo incondicional.
@@ -60,7 +60,7 @@ export default function VisionSection(){
                         </div>
                         <p className="text-xl leading-relaxed text-slate-800">
                             Nuestro norte es consolidar una comunidad de líderes que vean en la <span className="text-red-600 font-bold italic">unión </span>
-                             su mayor ventaja competitiva. En CEAMUN, proyectamos un futuro donde la lealtad y el trabajo en equipo 
+                             su mayor ventaja competitiva. En <span className="text-red-600 font-bold italic">CEAMUN </span>, proyectamos un futuro donde la lealtad y el trabajo en equipo 
                              sean el motor que impulse a la delegación del Colegio El Ángel a superar sus propios límites. Nuestra meta
                             no es solo liderar el circuito a través de premios, sino transformarlo mediante el ejemplo de una familia que debate con rigor y convive con mística.
                         </p>
