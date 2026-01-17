@@ -5,6 +5,7 @@ import { User } from 'lucide-react';
 import img1 from '../owners/darla.jpg';
 import img2 from '../owners/diego.jpg';
 import img3 from '../owners/samantha.jpg';
+import img4 from '../owners/maria.jpeg';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -12,37 +13,50 @@ const testimonios = [
     {
         id: 1,
         text: `CEAMUN fue lo primero que conocí al ingresar a la institución, y desde
-    entonces ha sido una fuente de conocimiento y felicidad constante estos dos años,
-    mi delegación se ha vuelto mi familia todo este tiempo y eso es lo que representa 
-    CEAMUN la unión, y valores compartidos que hacen de esta actividad algo mejor y 
-    mas allá de solo lo académico`,
+            entonces ha sido una fuente de conocimiento y felicidad constante estos dos años,
+            mi delegación se ha vuelto mi familia todo este tiempo y eso es lo que representa 
+            CEAMUN la unión, y valores compartidos que hacen de esta actividad algo mejor y 
+            mas allá de solo lo académico`,
         name: '-Diego Ojeda',
         cargo: 'Faculty Advisor 2025-2026',
         image: img2
     },
     {
         id: 2,
-        text: `Si MUN, solo es ir a delegar a modelos y ganar,
-        porque son necesarias las delegaciones? Fácil, porque MUN no es solo eso..
-        Una delegación es crucial en el desarrollo de un delegado, ya que genera un sentido
-        de pertenencia, orgullo, lealtad y sobretodo te enseña a preocuparte por el bienestar 
-        del otro y no solo el tuyo. Cuando fui delegada me enfoqué mucho en superarme a mí misma
-         y divertirme, pero como Faculty y autoridad ahora mi prioridad es otra…Esta es buscar 
-         el bien común de todos los integrantes de CEAMUN y preservar el legado de excelencia.
-        En este cambio está la diferencia. Tener un cargo en MUN no está para hacerte la vida más fácil,
-        imponerse o pasar por encima de las normas, en realidad es todo lo contrario. Si uno es autoridad, 
-        uno debe usar ese poder para servir a los demás, impulsarlos y dar ejemplo.  
-        Por esto…CEAMUN como delegada me enseñó disciplina y resiliencia, pero como persona me enseñó lealtad, amistad y como servir a los demás.`,
+        text: `Una delegación es crucial en el desarrollo de un delegado, ya que genera un sentido de pertenencia,
+         orgullo, lealtad y te enseña a preocuparte por el bienestar del otro y no solo el tuyo. Cuando 
+         fui delegada me enfoqué mucho en superarme a mí misma y divertirme, pero como Faculty y autoridad ahora 
+         mi prioridad es otra. Esta es buscar el bien común de todos los integrantes de CEAMUN y preservar el legado
+        de excelencia. En este cambio está la diferencia. Tener un cargo en MUN no está para hacerte la vida más fácil,
+        imponerse o pasar por encima de las normas, en realidad es todo lo contrario. Si uno es autoridad, uno debe usar ese 
+        poder para servir a los demás, impulsarlos y dar ejemplo.`,
         name: '-Darla Andrade',
         cargo: 'Faculty Advisor 2025-2026',
         image: img1
     },
     {
         id: 3,
-        text: 'Ceamun me cambio la vida',
+        text:`Más allá de ser una simple delegación, aquí inicié con conocimientos 
+        básicos y hoy me enorgullece decir que me han formado hasta convertirme en el delegado que soy.
+         Para mí, CEAMUN siempre será ese lugar donde me siento escuchada y apoyada, manteniendo siempre
+        la responsabilidad como nuestro pilar fundamental.
+        La delegación me enseñó que los problemas van de la mano con el compañerismo, en donde cada debate
+        son nuevas experiencias. Así mismo que somos una familia, para mí, la más linda.`,
         name: '-Samantha Gomes',
         cargo: 'Vice-secretaria general',
         image: img3
+    },
+    {
+        id: 4,
+        text: `Siete años atrás, en 6to grado, entré a mi primer comité con una carpeta llena de dudas y muchísimo miedo. 
+        Hoy, como Secretaria General de CEAMUN 2026, miro hacia atrás y veo que este modelo no solo fue una actividad; fue donde
+        crecí. De esa niña que apenas se atrevía a hablar, a estar hoy aquí dando todo de mí por la delegación que me formó. Han 
+        sido seis años de aprendizaje, esfuerzo y una pasión que, lejos de agotarse, hoy está más fuerte que nunca.
+        Más allá de los debates y las resoluciones, lo que realmente me mantuvo aquí todo este tiempo fue la familia que encontré.
+        CEAMUN se convirtió en mi lugar seguro, un espacio donde crecí rodeada de personas que se volvieron mis hermanos de vida.`,
+        name: "-Maria Isabella Castelo",
+        cargo: 'Secretaría General',
+        image: img4
     }
 ];
 
