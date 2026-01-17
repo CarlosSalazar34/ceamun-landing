@@ -17,7 +17,7 @@ export default function MainSection() {
 }, []);
 
     return (
-        <section id="inicio" class="h-[90vh] bg-gradient-to-tl to-red-400 from-black/80 w-full flex flex-col items-center justify-center">
+        <section id="inicio" class="h-screen bg-gradient-to-tl to-red-400 from-black/80 w-full flex flex-col items-center justify-center">
             <h1 className={`${responsive? 'text-[3rem]': 'title'} text-white flex gap-1`}>
                 {title.map((value, index) => (
                     <span
