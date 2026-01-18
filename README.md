@@ -24,4 +24,4 @@ Sigue estos pasos para tener una copia del proyecto funcionando en tu máquina l
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/tu-usuario/ceamun-landing.git](https://github.com/tu-usuario/ceamun-landing.git)
+   git clone https://github.com/CarlosSalazar34/ceamun-landing.git
