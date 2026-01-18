@@ -4,7 +4,7 @@ Sitio web oficial de **CEAMUN** (Modelo de Naciones Unidas). Una plataforma mode
 
 ---
 
-## ✨ Características principaless
+## ✨ Características principales
 
 * **Interfaz Dinámica:** Hero section con efectos de hover en el título y animaciones fluidas.
 * **Responsive Design:** Adaptado para móviles y escritorio (Breakpoint de 720px).
