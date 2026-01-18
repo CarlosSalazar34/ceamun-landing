@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
 import { User, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -75,6 +75,20 @@ const testimonios = [
 
 export default function CarouselTestimonios() {
     const [activeId, setActiveId] = useState(null);
+    const [invisible, setInvisible] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setInvisible(window.innerWidth < 720);
+        };
+
+        handleResize(); 
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
 
     const prevRef = useRef(null);
     const nextRef = useRef(null);
@@ -86,7 +100,7 @@ export default function CarouselTestimonios() {
     return (
         <div className="max-w-4xl mx-auto px-5 relative">
             {/* BOTONES DE NAVEGACIÓN */}
-            <div className="flex justify-center gap-4 mb-6">
+            <div className={invisible ? "hidden" : 'flex justify-center gap-4 mb-6'}>
                 <button
                     ref={prevRef}
                     className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition shadow-lg"
