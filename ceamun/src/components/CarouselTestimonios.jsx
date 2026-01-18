@@ -85,6 +85,22 @@ export default function CarouselTestimonios() {
 
     return (
         <div className="max-w-4xl mx-auto px-5 relative">
+            {/* BOTONES DE NAVEGACIÓN */}
+            <div className="flex justify-center gap-4 mb-6">
+                <button
+                    ref={prevRef}
+                    className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition shadow-lg"
+                >
+                    <ChevronLeft size={24} />
+                </button>
+
+                <button
+                    ref={nextRef}
+                    className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition shadow-lg"
+                >
+                    <ChevronRight size={24} />
+                </button>
+            </div>
 
             <Swiper
                 modules={[Pagination, Navigation]}
@@ -157,22 +173,6 @@ export default function CarouselTestimonios() {
                     );
                 })}
             </Swiper>
-            {/* BOTONES DE NAVEGACIÓN */}
-            <div className="flex justify-center gap-4 mb-6">
-                <button
-                    ref={prevRef}
-                    className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition shadow-lg"
-                >
-                    <ChevronLeft size={24} />
-                </button>
-
-                <button
-                    ref={nextRef}
-                    className="p-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition shadow-lg"
-                >
-                    <ChevronRight size={24} />
-                </button>
-            </div>
         </div>
     );
 }
