@@ -6,6 +6,7 @@ import img1 from '../owners/darla.jpg';
 import img2 from '../owners/diego.jpg';
 import img3 from '../owners/samantha.jpg';
 import img4 from '../owners/maria.jpeg';
+import img5 from '../owners/ricardo.jpeg';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -55,6 +56,17 @@ const testimonios = [
         name: "-Maria Isabella Castelo",
         cargo: 'Secretaría General',
         image: img4
+    },
+    {
+        id: 5,
+        text: `Mun. Mun es una actividad exigente, intelectual y físicamente, que requiere disciplina y sacrificio. Y,
+        de lo más importante para que está actividad sea amena es poseer apoyo y dirección intelectual, es decir, una delegacion.
+        En mi caso, mi delegacion, Ceamun, ha sido no solo un destacable apoyo para mí en esta actividad, si no que también una familia,
+        traspasando factores como edad, grado académico y el tiempo conociéndonos. Sin importar que, nunca cambiaría haber sido participe
+        de Ceamun, ha sido una de mis experiencias más enriquecedoras y me formo como la persona que soy hoy.`,
+        name: "-Ricardo Marcano",
+        cargo: 'Head Delegate',
+        image: img5
     }
 ];
 
